@@ -4,9 +4,7 @@ namespace common\models;
 use Yii;
 use yii\base\Model;
 
-/**
- * Login form
- */
+
 class LoginForm extends Model
 {
     public $username;
@@ -16,15 +14,12 @@ class LoginForm extends Model
     private $_user;
 
 
-    /**
-     * {@inheritdoc}
-     */
     public function rules()
     {
         return [
-            // username and password are both required
+
             [['username', 'password'], 'required'],
-            // rememberMe must be a boolean value
+
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
@@ -48,11 +43,7 @@ class LoginForm extends Model
         }
     }
 
-    /**
-     * Logs in a user using the provided username and password.
-     *
-     * @return bool whether the user is logged in successfully
-     */
+
     public function login()
     {
         if ($this->validate()) {
