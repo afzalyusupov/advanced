@@ -37,7 +37,6 @@ class SiteController extends Controller
         ];
     }
 
-
     public function actions()
     {
         return [
@@ -47,13 +46,11 @@ class SiteController extends Controller
         ];
     }
 
-
     public function actionIndex()
     {
         return $this->render('index');
     }
 
-    
 
     public function actionLogin()
     {
@@ -72,7 +69,6 @@ class SiteController extends Controller
             ]);
         }
     }
-
 
     public function actionLogout()
     {
